@@ -3,22 +3,29 @@ using namespace std;
 
 class empolyee{
 public:    
-    string name;
-    string company;
-    int age;
+    string Name;
+    string Company;
+    int Age;
 
     void empolyeeIntroduce(){
-        cout <<"Name: "<<name<<endl;
-        cout<<"Company: "<<company<<endl;
-        cout<<"Age: "<<age<<endl;
+        cout <<"Name: "<<Name<<endl;
+        cout<<"Company: "<<Company<<endl;
+        cout<<"Age: "<<Age<<endl<<endl;
+    }
+    empolyee(string name, string company, int age)
+    {
+        Name = name;
+        Company = company;
+        Age = age;
     }
 };
 
 int main()
 {
-    empolyee empolyee1;
-    empolyee1.name = "Bikash Chandra Ray";
-    empolyee1.company = "BTCL";
-    empolyee1.age = 28;
+    empolyee empolyee1 = empolyee("Bikash Chandra Ray", "Amazon", 28);
     empolyee1.empolyeeIntroduce();
+
+    empolyee empolyee2 = empolyee("Imran Hossain", "Meta", 27);
+    empolyee2.empolyeeIntroduce();
+
 }
